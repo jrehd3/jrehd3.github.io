@@ -1,2 +1,2 @@
 # jrehd3.github.io
-My website.
+Website is currently down for revamp.
