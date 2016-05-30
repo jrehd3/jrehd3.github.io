@@ -26,12 +26,34 @@ p {
     font-size: 12px;
     
 }
+
+
 </style>
 <div ng-app="myApp" ng-controller="myCtrl">
 <h1 style="color:red;"><mark>Notice: This page is not designed for public use. Feel free to look around, but features are not going to be fully fuctional.</mark></h1>
 <h2> BB Code Reader</h2>
 <h3>Text</h3>
-<button class="button"><b>B</b></button><button class="button"><u>U</u></Button><button class="button"><i>I</i></Button><button class="button"><del>S</del></Button><button class="button"><mark>M</mark></Button>
+
+<form>
+
+  <input type="radio" ng-model="myVar" value="Format">Format
+  <input type="radio" ng-model="myVar" value="Insert">Insert
+  <input type="radio" ng-model="myVar" value="Scratch">Scratch
+</form>
+
+<div ng-switch="myVar">
+  <div ng-switch-when="Format">
+     <button class="button"><b>B</b></button><button class="button"><u>U</u></Button><button class="button"><i>I</i></Button><button class="button"><del>S</del></Button><button class="button"><mark>M</mark></Button>
+  </div>
+  <div ng-switch-when="Insert">
+   <button class="button"><b>Flash</b></button><button class="button"><b>IP</b></button><button class="button"><b>[/]</b></button>
+     
+  </div>
+  <div ng-switch-when="Scratch">
+      <button class="button"><b>Scratch Blocks</b></button><button class="button"><b>Wiki link</b></button>
+  </div>
+</div>
+
 <form>
   <textarea ng-model="bbcode">Example... </textarea>
 </form>
