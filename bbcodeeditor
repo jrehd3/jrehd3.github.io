@@ -28,7 +28,8 @@ p {
 }
 </style>
 <div ng-app="myApp" ng-controller="myCtrl">
-
+<h1 style="color:red;"><mark>Notice</mark</h1>
+This page is not designed for public use. Feel free to look around, but features are not going to be fully fuctional.
 <h3>Text</h3>
 <button class="button"><b>B</b></button><button class="button"><u>U</u></Button><button class="button"><i>I</i></Button><button class="button"><del>S</del></Button><button class="button"><mark>M</mark></Button>
 <form>
