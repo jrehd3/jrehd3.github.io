@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<title>BB Code Reader </title>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<style> 
+textarea {
+    width: 100%;
+    height: 200px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 4px solid #ccc;
+    background-color: #f2f2f2;
+    font-size: 12px;
+    
+}
+
+p {
+    width: 100%;
+    height: 200px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 4px solid #ccc;
+    background-color: #f2f2f2;
+    font-size: 12px;
+    
+}
+</style>
+<div ng-app="myApp" ng-controller="myCtrl">
+
+<h3>Text</h3>
+<button class="button"><b>B</b></button><button class="button"><u>U</u></Button><button class="button"><i>I</i></Button><button class="button"><del>S</del></Button><button class="button"><mark>M</mark></Button>
+<form>
+  <textarea ng-model="bbcode">Example... </textarea>
+</form>
+
+<h3> BB code </h3>
+<p>{{bbcode}}</p>
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.bbcode= "Example...";
+   
+});
+</script>
+
+</body>
+</html>
