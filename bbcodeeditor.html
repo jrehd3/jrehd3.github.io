@@ -38,28 +38,19 @@ body {
     	<button onclick="document.getElementById('id01').style.display='block'" class="w3-btn w3-theme-d1 w3-large"><i class="fa fa-search" aria-hidden="true"></i></button>
 	</div>
 	<div class="w3-rest">
-		<div ng-app="myApp" ng-controller="myCtrl">
-			<script>
-			var app = angular.module('myApp', []);
-			app.controller('myCtrl', function($scope) {
-			});
+		
 			
-			</script>
 	<input class="w3-input w3-animate-input w3-input w3-border-1 w3-theme-d1 " type="text" style="width:30%" ng-model="search" placeholder="Search..." >   <br>
         </div>
         </div>
-<script>
-var search = {{search}};
-</script>
+
         
         <div id="id01" class="w3-modal ">
   <div class="w3-modal-content w3-card-8 w3-animate-zoom">
     <header class="w3-container w3-theme-d3"> 
       <span onclick="document.getElementById('id01').style.display='none'" 
       class="w3-closebtn">&times;</span>
-      <script>
-	document.write="Search for" + search;
-	</script>
+      <h3> Search</h3>
     </header>
     <div class="w3-container">
     	<br>
