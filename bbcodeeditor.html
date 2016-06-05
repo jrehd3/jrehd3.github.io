@@ -39,6 +39,11 @@ body {
 	</div>
 	<div class="w3-rest">
 		<div ng-app="myApp" ng-controller="myCtrl">
+			<script>
+			var app = angular.module('myApp', []);
+			app.controller('myCtrl', function($scope) {
+			});
+</script>
 	<input class="w3-input w3-animate-input w3-input w3-border-1 w3-theme-d1 " type="text" style="width:30%" ng-model="search" placeholder="Search..." >   <br>
         </div>
         </div>
@@ -63,11 +68,6 @@ body {
   </div>
 </div>
 
-<script>
-var app = angular.module('myApp', []);
-app.controller('myCtrl', function($scope) {
-});
-</script>
  </div>
  </div>
 </div>
