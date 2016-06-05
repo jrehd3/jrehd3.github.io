@@ -43,11 +43,14 @@ body {
 			var app = angular.module('myApp', []);
 			app.controller('myCtrl', function($scope) {
 			});
-</script>
+			
+			</script>
 	<input class="w3-input w3-animate-input w3-input w3-border-1 w3-theme-d1 " type="text" style="width:30%" ng-model="search" placeholder="Search..." >   <br>
         </div>
         </div>
-
+<script>
+var search = {{search}};
+</script>
         
         <div id="id01" class="w3-modal ">
   <div class="w3-modal-content w3-card-8 w3-animate-zoom">
