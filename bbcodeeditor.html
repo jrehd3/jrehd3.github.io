@@ -10,6 +10,42 @@
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script>
+function selectionIsBold() {
+    var isBold = false;
+    if (document.queryCommandState) {
+        isBold = document.queryCommandState("bold");
+    }
+    return isBold;
+}
+function getSelectedText() {
+    var text = "";
+    if (typeof window.getSelection != "undefined") {
+        text = window.getSelection().toString();
+    } else if (typeof document.selection != "undefined" && document.selection.type == "Text") {
+        text = document.selection.createRange().text;
+    }
+    return text;
+}
+function bold() {
+	document.execCommand("bold");
+}
+function italic() {
+	document.execCommand("italic");
+}
+function underline() {
+	document.execCommand("underline");
+}
+shortcut.add("Ctrl+B", function(){
+	bold();
+});
+shortcut.add("Ctrl+I", function(){
+	italic();
+});
+shortcut.add("Ctrl+U", function(){
+	underline();
+});	
+</script>
 <style>
 	a:link {
     text-decoration: none;
@@ -21,6 +57,29 @@ a:hover {
 
 body {
     background-color: #f2f2f2;
+}
+nav ul {
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+}
+nav ul li {
+	display: inline;
+	margin: 0;
+	padding: 1px;
+	list-style-type: none;
+	border: 1px solid black;
+	cursor: pointer;
+	color: black;
+}
+nav ul li:hover {
+	color: gray;
+}
+.fake {
+	border: 1px solid black;
+	width: 700px;
+	height: 300px;
+	font-family: sans-serif;
 }
 	
 </style>
@@ -79,15 +138,14 @@ body {
 	
 <div align="center">
 <div class="w3-card-4 w3-white" style=" width: 75%;  margin: 24px 0; padding: 16px">
-<h3>-Insert Editor Here- <br>
-<br>
-<br>
-<br></h3>
-<br>
-<br>
-<br>
-<br>
-<p>-end of editor-</p>
+<nav>
+	<ul>
+		<li id="bold">&nbsp;<span class="fa fa-bold"></span>&nbsp;</li><li>&nbsp;<span class="fa fa-italic"></span>&nbsp;</li><li>&nbsp;<span class="fa fa-underline"></span>&nbsp;</li><li>&nbsp;<span class="fa fa-code"></span>&nbsp;</li><li>&nbsp;<span class="fa fa-file-image-o"></span>&nbsp;</li>
+	</ul>
+</nav>
+<span>SPAN</span>
+<div class="fake" contenteditable></div>
+
 </div>
 </div>
 
