@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">  
 <head>
 <title>BB - Editor</title> 
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -36,6 +36,8 @@ function italic() {
 function underline() {
 	document.execCommand("underline");
 	
+}
+
 function dropdown() {
     var x = document.getElementById("box");
     if (x.className.indexOf("w3-show") == -1) {
@@ -43,7 +45,6 @@ function dropdown() {
     } else { 
         x.className = x.className.replace(" w3-show", "");
     }
-}
 }
 shortcut.add("Ctrl+B", function(){
 	bold();
