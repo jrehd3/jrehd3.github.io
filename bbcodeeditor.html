@@ -35,6 +35,15 @@ function italic() {
 }
 function underline() {
 	document.execCommand("underline");
+	
+function dropdown() {
+    var x = document.getElementById("box");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
 }
 shortcut.add("Ctrl+B", function(){
 	bold();
@@ -132,8 +141,15 @@ nav ul li:hover {
 	<div class="w3-btn-group">
 		<a class="w3-btn w3-theme-d1 w3-padding-large w3-hover-theme w3-ripple"><i class="fa fa-home w3-xlarge" aria-hidden="true"></i> Home</a>
 		<a class="w3-btn w3-theme-d1 w3-padding-large w3-hover-theme w3-ripple"><i class="fa fa-download w3-xlarge" aria-hidden="true"></i> Download</a>
-		<a class="w3-btn w3-theme-d1 w3-padding-large w3-hover-theme w3-ripple"><i class="fa fa-info w3-xlarge" aria-hidden="true"></i> About</a>
+		<a class="w3-btn w3-theme-d1 w3-padding-large w3-hover-theme w3-ripple"><i class="fa fa-info w3-xlarge" aria-hidden="true"></i> Forums</a>
+		<div class="w3-dropdown-click">
 		<a class="w3-btn w3-theme-d1 w3-padding-large w3-hover-theme w3-ripple"><i class="fa fa-question w3-xlarge" aria-hidden="true"></i> Help</a>
+		<div id="box" class="w3-dropdown-content w3-card-4">
+    				<a href="#">Link 1</a>
+    				<a href="#">Link 2</a>
+    				<a href="#">Link 3</a>
+			 	</div>
+			</div>
 		</div>
 </div>
 <div align="center">
