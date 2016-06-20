@@ -12,9 +12,6 @@
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <script src="/js/ads blocker checker.js"></script>
 <script>
-if ( window.Adblock === undefined ) {
-    alert("Please consider disabling your adblock to help support this project");
-}
 function selectionIsBold() {
     var isBold = false;
     if (document.queryCommandState) {
@@ -216,5 +213,11 @@ nav ul li:hover {
 <p class="w3-myfont">BB - Editor is licenced under the -insert licence here-. <br>
 2016</p>
 </div>
+
+<script>
+if ( window.Adblock === undefined ) {
+    alert("Please consider disabling your adblock to help support this project");
+}
+</script>
 </body>
 </html>
