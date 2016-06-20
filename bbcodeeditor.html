@@ -10,7 +10,11 @@
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="/js/ads blocker checker.js"></script>
 <script>
+if ( window.Adblock === undefined ) {
+    document.getElementById('id01').style.display='block'"
+}
 function selectionIsBold() {
     var isBold = false;
     if (document.queryCommandState) {
@@ -115,7 +119,26 @@ nav ul li:hover {
 	<input class="w3-input w3-animate-input w3-input w3-border-1 w3-theme-d1 " type="text" style="width:30%" ng-model="search" placeholder="Search..." >   <br>
         </div>
         </div>
-
+<div id="id02" class="w3-modal ">
+  <div class="w3-modal-content w3-card-8 w3-animate-zoom">
+    <header class="w3-container w3-theme-d3"> 
+      <span onclick="document.getElementById('id02').style.display='none'" 
+      class="w3-closebtn">&times;</span>
+      <h3 class="w3-myfont"> Search</h3>
+    </header>
+    <div class="w3-container">
+     <p style="color:black;"> Results for:<br>
+      (result)<br>
+      (result)<br>
+      (result)<br>
+      (result)<br>
+      (result)<br>
+         </div>
+         
+    <footer class="w3-container w3-theme-d3">
+      <p class="w3-myfont">2016</p> 
+    </footer>
+  </div>
         
         <div id="id01" class="w3-modal ">
   <div class="w3-modal-content w3-card-8 w3-animate-zoom">
