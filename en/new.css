@@ -1,0 +1,15 @@
+.title {
+    border-radius: 20px 20px 0px 0px;
+    background: #eee;
+    padding: 20px; 
+    width: 100%;
+}
+
+.content {
+    padding: 20px;
+    width: 100%;
+    border 1px solid #eee;
+    
+}
+
+body{}
